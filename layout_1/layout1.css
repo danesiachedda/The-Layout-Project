@@ -1,0 +1,203 @@
+/*------------------------------*/
+/*  AREA CONTAINING THE LAYOUT  */
+/*------------------------------*/
+#project-content {
+    width: 1200px;
+}
+
+#project-content-notice {
+    visibility: hidden;
+    position: absolute;
+    width: 700px;
+    text-align: center;
+}
+
+
+/*---------------------------*/
+/*       DESKTOP STYLES      */
+/*---------------------------*/
+#desktop-container {
+    width: 100%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(17, 70px);
+    grid-template-rows: repeat(9, 70px);
+    row-gap: 8px;
+    text-align: center;
+    background-image: url(images/73-737065_living-waters-ag-wave-vector-clipart.png);
+    background-size: cover;
+}
+
+#desktop-clock-widget {
+    grid-area: 2 / 2 / span 2 / span 4;
+    border-radius: 8px;
+    background-color: #072c3cbf;
+    font-family: 'Poppins', sans-serif;
+    color: #f4f4f4;
+}
+    #desktop-clock-widget > h1 {
+        margin: 0.5em 0 0;
+        font-size: 3em;
+        font-weight: 700;
+    }
+
+    #desktop-clock-widget > h4 {
+        margin: 0;
+        font-weight: 400;
+        color: #c0c0c0;
+    }
+
+#desktop-shortcut-block {
+    grid-area: 2 / 14 / span 3 / span 3;
+
+    display: grid;
+    grid-template: subgrid / subgrid;
+    align-items: baseline;
+}
+
+.desktop-shortcut.empty {
+    visibility: hidden;
+    border: 1px solid #000;
+    /*--------------------------------------------------------*/
+    /* Border and numbers added solely for developer purposes */
+    /*--------------------------------------------------------*/
+}
+
+.desktop-shortcut.filled {
+    width: 70px;
+    height: 70px;
+    border: 1px solid transparent;
+}
+
+.desktop-shortcut.filled > img {
+    width: 45px;
+    height: 45px;
+}
+
+.desktop-shortcut-label {
+    width: 50px;
+    margin: 0;
+    font-size: 12px;
+    color: #f4f4f4;
+    text-shadow: -1px -1px 0 #0000006b, 1px -1px 0 #0000006b, -1px 1px 0 #0000006b, 1px 1px 0 #0000006b;
+        /*----------------------------------------------------------*/
+        /* This text-shadow creates a border effect around the text */
+        /*----------------------------------------------------------*/
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+        /*----------------------------------------------------------*/
+        /* The text-overflow effect does not work unless the three  */
+        /* properties above it have also been set accordingly       */
+        /*----------------------------------------------------------*/
+}
+
+
+/*---------------------------*/
+/*       TASKBAR STYLES      */
+/*---------------------------*/
+#taskbar {
+    position: relative;
+    bottom: 43px;
+    max-width: 1200px;
+    max-height: 44px;
+    padding: 0 0 0 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #072c3cbf;
+    color: #f4f4f4;
+}
+
+    #taskbar > *:not(:last-child) {
+        margin: 10px 0;
+    }
+
+    /*----------------------------*/
+
+    #taskbar-left {
+        display: flex;
+        flex-basis: 100px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #taskbar-right-container {
+        flex-basis: 170px;
+        display: flex;
+        justify-content: flex-end;
+    }
+        #taskbar-right {
+            display: flex;
+            flex-basis: 180px;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+    /*----------------------------*/
+
+    .taskbar-icons {
+        max-width: 20px;
+        filter: invert();
+    }
+        /*----------------------------------------------*/
+        /* Individual icon resizing, for visual harmony */
+        /*----------------------------------------------*/
+        .taskbar-icons.wifi {
+            width: 15px;
+            height: 16px;
+        }
+
+        .taskbar-icons.ink {
+            height: 18px;
+        }
+
+    /*----------------------------*/
+    
+    .taskbar-window-label {
+        visibility: hidden;
+        min-width: 190px;
+        margin: 0 5px 0;
+        border: 1px solid #f4f4f4;
+        border-radius: 3px;
+    }
+    
+    .taskbar-peek {
+        flex-basis: 5px;
+        border: solid #d5d5d574;
+        border-width: 0 0 0 1px;
+    }
+
+    .taskbar-section-spacer {
+        flex-basis: 20px;
+    }
+
+
+/*--------------------------*/
+/*   INTERACTIVE BEHAVIOUR  */
+/*--------------------------*/
+.desktop-shortcut.filled:hover,
+.taskbar-window-label:hover
+    {
+        background-color: #d5d5d55e;
+        border: 1px solid #d5d5d574;
+    }
+
+.taskbar-peek:hover {
+    background-color: #d5d5d55e;
+}
+
+
+/*--------------------------------------*/
+/* SCREEN SIZE-RESPONSIVE MEDIA QUERIES */
+/*--------------------------------------*/
+@media screen and (max-width: 1280px) {
+    #project-content {
+        visibility: hidden;
+    }
+
+    #project-content-notice {
+        visibility: visible;
+    }
+}
+

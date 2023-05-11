@@ -1,0 +1,170 @@
+/*---------------------------*/
+/*      SKELETON STYLES      */
+/* Present on multiple pages */
+/*---------------------------*/
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 2;
+}
+
+    p > a {
+        font-weight: 700;
+        color: #004056;
+    }
+
+    p > a:hover {
+        text-decoration: underline;
+    }
+
+/*----------------------*/
+
+#nav {
+    padding: 2em 10em;
+    background-color: #000;
+}
+
+#nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+    #nav-bar a:not(.active) {
+        color: #f4f4f4;
+    }
+
+#nav-logo-link {
+    justify-self: flex-start;
+}
+
+#nav-links-list {
+    margin: 0 0 0 auto;
+}
+
+.nav-links {
+    display: inline-block;
+}
+
+.nav-links:not(:last-child) {
+    margin: 0 1em 0 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+#breadcrumb-trail {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #f4f4f4;
+}
+    .breadcrumb {
+        display: inline-block;
+    }
+
+    .breadcrumb > h1 .active {
+        color: #c09f1d;
+    }
+
+/*----------------------*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px;
+}
+
+.article-title {
+    margin: 0 0 0.8em;
+}
+
+.article-content {
+    max-width: 70vw;
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px #b6b6b6;
+    background-color: #fbfbfb;
+}
+    #about-page .article-content ul > li,
+    #lp01-page .article-content ul > li {
+        list-style-type: circle;
+        line-height: 2;
+    }
+
+.article-heading a {
+    color: #000;
+}
+
+.article-heading::before {
+    content: "#";
+    cursor: pointer;
+    margin: 0 0 0 -0.8em;
+    visibility: hidden;
+    color: #b6b6b6;
+}
+    .article-heading:hover:before {
+        visibility: visible;
+    }
+
+.changelog * {
+    line-height: 1.5;
+}
+
+.changelog.key {
+    list-style: none;
+    padding: 0;
+}
+
+
+/*----------------------*/
+
+.grid-container {
+    margin: 0 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 30px;
+}
+
+.project-preview > img {
+    max-width: 100%;
+}
+    .project-preview {
+        transition: 0.3s;
+    }
+
+    .project-preview:hover {
+        opacity: 0.5;
+    }
+
+/*----------------------*/
+
+#footer {
+    padding: 1em 0;
+    text-align: center;
+    color: #f4f4f4;
+    background-color: #000;
+}
+
+#footer .social-icons {
+    max-width: 25px;
+    vertical-align: middle;
+    filter: invert();
+}
+
+#footer a:nth-child(3) {
+    margin: 0 0.5em 0;
+}
+
+/*----------------------*/
