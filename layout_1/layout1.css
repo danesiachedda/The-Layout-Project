@@ -52,7 +52,8 @@
     grid-area: 2 / 14 / span 3 / span 3;
 
     display: grid;
-    grid-template: subgrid / subgrid;
+    grid-template: repeat(3, 70px) / repeat(3, 70px);
+    gap: inherit;
     align-items: baseline;
 }
 
