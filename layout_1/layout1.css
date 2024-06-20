@@ -9,7 +9,7 @@
 #project-content-notice {
     visibility: hidden;
     position: absolute;
-    width: 700px;
+    max-width: fit-content;
     text-align: center;
 }
 
