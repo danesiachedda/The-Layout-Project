@@ -1,3 +1,4 @@
+
 /*------------------------------*/
 /*  AREA CONTAINING THE LAYOUT  */
 /*------------------------------*/
@@ -191,13 +192,27 @@
 /*--------------------------------------*/
 /* SCREEN SIZE-RESPONSIVE MEDIA QUERIES */
 /*--------------------------------------*/
-@media screen and (max-width: 1280px) {
-    #project-content {
-        visibility: hidden;
+@media screen and (max-width: 1280px) {    
+    #main {
+        height: 60vh;
     }
 
-    #project-content-notice {
-        visibility: visible;
+    #project-content {
+        visibility: hidden;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+        #project-content-notice {
+            visibility: visible;
+        }
+
+    .article-content {
+        max-height: 0;
+    }
+
+    #footer {
+        margin: auto 0 0 0;
     }
 }
 

@@ -167,4 +167,19 @@ main {
     margin: 0 0.5em 0;
 }
 
-/*----------------------*/
+/*--------------------------------------*/
+/* SCREEN SIZE-RESPONSIVE MEDIA QUERIES */
+/*--------------------------------------*/
+@media screen and (max-width: 1280px) {
+    #nav-bar {
+        flex-direction: column;
+    }
+
+    #breadcrumb-trail {
+        margin: 0 0 30px 0;
+    }
+
+    #nav-links-list {
+        margin: unset;
+    }
+}
